@@ -10,7 +10,7 @@ struct Pointers{
 
 //headers
 
-void Printlist(struct Pointers *node);
+void Printlist(struct Pointers *node);  // adição
 void new_item(struct Pointers **node, int *p);
 void increasing(struct Pointers **node, int *p);
 void decreasing(struct Pointers **node, int *p);
@@ -85,7 +85,7 @@ void increasing(struct Pointers **node, int *p){
     while(aux != NULL){
       if(aux->pt == p){
         aux->qtd++;
-        printf("I: memoria: %ld com %d ponteiros.\n",aux->pt,aux->qtd);
+        printf("I: memoria: %ld com %d ponteiros.\n",aux->pt,aux->qtd); // troquei node pelo proprio aux
       }
       aux = aux->next;
     }
@@ -96,7 +96,7 @@ void decreasing(struct Pointers **node, int *p){
     while(aux!=NULL){
       if(aux->pt == p){
         aux->qtd--;
-        printf("D: memoria: %ld com %d ponteiros.\n",aux->pt,aux->qtd);
+        printf("D: memoria: %ld com %d ponteiros.\n",aux->pt,aux->qtd);  // troquei node por aux
         delete_item(node);
       }
       aux = aux->next;
