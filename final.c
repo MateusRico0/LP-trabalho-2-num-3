@@ -39,6 +39,7 @@ void atrib2(int **p, int **p2, struct Pointers **gc){
 
 void free_pointer(int **p, struct Pointers **gc){
   delete_item(&(*gc));
+  decreasing(&(*gc),*p);
   free(*p);
 }
 
